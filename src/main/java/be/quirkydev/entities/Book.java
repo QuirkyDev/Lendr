@@ -1,22 +1,29 @@
 package be.quirkydev.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "BOOK", schema="LENDR")
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
+    @Column(name = "TITLE")
     private String title;
+    @Column(name = "AUTHOR")
     private String author;
+    @Column(name = "PUBLISHER")
     private String publisher;
+    @Column(name = "SUMMARY")
     private String summary;
+    @Column(name = "PAGES")
     private int pages;
+    @Column(name = "LANGUAGE_ID")
     private Long languageId;
+    @Column(name = "FORMAT_ID")
     private Long formatId;
+    @Column(name = "GENRES")
     private String genres;
 
     public Book() {

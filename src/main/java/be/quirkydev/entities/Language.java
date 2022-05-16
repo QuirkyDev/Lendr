@@ -1,16 +1,17 @@
 package be.quirkydev.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "LANGUAGE", schema="LENDR")
 public class Language {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
+    @Column(name = "NAME")
     private String name;
+    @Column(name = "CODE")
     private String code;
 
     public Language() {
